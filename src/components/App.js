@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from './Header';
+import SideBar from './SideBar';
 
 const App = () => {
   return (
     <div className='App'>
-      <h1>Youtube Clone</h1>
+      <Header />
+      <SideBar />
     </div>
   );
 };
