@@ -25,9 +25,9 @@ const Header = () => {
         </button>
       </div>
       <div className='MainHeader__icons'>
-        <VideoCallIcon />
-        <AppsIcon />
-        <NotificationsIcon />
+        <VideoCallIcon className='MainHeader__icon' />
+        <AppsIcon className='MainHeader__icon' />
+        <NotificationsIcon className='MainHeader__icon' />
         <Avatar
           alt='Chris Davis'
           src='https://www.gravatar.com/avatar/90869ccfcf2c74c17013f5a74cdd7d7a'
