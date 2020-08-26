@@ -1,7 +1,7 @@
 .SidebarRow {
   display: flex;
   align-items: center;
-  padding: 0.45em 1em;
+  padding: 0.5em 1em;
   transition: 0.2s ease-in-out;
   color: #606060;
   cursor: pointer;
@@ -10,24 +10,29 @@
     background: #f2f2f2;
   }
 
-  .title {
-    font-size: 0.875rem;
-    margin: 0;
-  }
-
   .icon {
     color: #606060;
     margin-right: 1.25em;
+  }
+
+  .title {
+    font-size: 0.875rem;
+    margin: 0;
+    font-weight: 400;
   }
 }
 
 .active {
   background: #e5e5e5;
   color: #000;
-  font-weight: bold;
+  font-weight: 800;
 
   .icon {
     color: #ff0000;
+  }
+
+  .title {
+    font-weight: 700;
   }
 
   &:hover {
