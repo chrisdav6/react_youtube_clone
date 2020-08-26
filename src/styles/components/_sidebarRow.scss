@@ -1,14 +1,18 @@
 .SidebarRow {
   display: flex;
   align-items: center;
-  font-size: 0.875rem;
-  padding: 0.35em 1em;
+  padding: 0.45em 1em;
   transition: 0.2s ease-in-out;
   color: #606060;
   cursor: pointer;
 
   &:hover:not(.active) {
     background: #f2f2f2;
+  }
+
+  .title {
+    font-size: 0.875rem;
+    margin: 0;
   }
 
   .icon {
