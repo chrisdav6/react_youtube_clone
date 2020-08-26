@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AppsIcon from '@material-ui/icons/Apps';
@@ -7,7 +7,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import Avatar from '@material-ui/core/Avatar';
 import YoutubeLogo from '../img/yt_logo_rgb_light.png';
 
-const Header = () => {
+const Header = ({ input, handleSearch, handleInput }) => {
   return (
     <header className='MainHeader'>
       <div className='MainHeader__left'>
@@ -19,8 +19,13 @@ const Header = () => {
         />
       </div>
       <div className='MainHeader__input'>
-        <input type='text' placeholder='Search' />
-        <button>
+        <input
+          type='text'
+          placeholder='Search'
+          value={input}
+          onChange={handleInput}
+        />
+        <button onClick={handleSearch}>
           <SearchIcon />
         </button>
       </div>
