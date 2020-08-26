@@ -6,7 +6,10 @@ const RecommendedVideos = ({ movies }) => {
       {movies.map((movie, idx) => (
         <div key={idx} className='movie'>
           <div className='movieImage'>
-            <img src={movie.snippet.thumbnails.high.url} alt='movie image' />
+            <img
+              src={movie.snippet.thumbnails.high.url}
+              alt={movie.snippet.title}
+            />
           </div>
           <h3 className='movieTitle'>{movie.snippet.title}</h3>
           <p className='desc'>{movie.snippet.description}</p>
@@ -14,6 +17,7 @@ const RecommendedVideos = ({ movies }) => {
             className='link'
             href={`https://www.youtube.com/watch?v=${movie.id.videoId}`}
             target='_blank'
+            rel='noopener noreferrer'
           >
             Link to Video
           </a>

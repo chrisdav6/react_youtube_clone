@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AppsIcon from '@material-ui/icons/Apps';
