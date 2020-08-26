@@ -1,4 +1,9 @@
 .SideBar {
-  width: 20%;
-  background: red;
+  flex: 0.2;
+
+  hr {
+    border: none;
+    height: 1.5px;
+    background: rgb(199, 199, 199);
+  }
 }
