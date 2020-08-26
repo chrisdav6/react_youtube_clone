@@ -1,6 +1,7 @@
 .SidebarRow {
   display: flex;
   align-items: center;
+  font-size: 0.875rem;
   padding: 0.35em 1em;
   transition: 0.2s ease-in-out;
   color: #606060;
@@ -19,6 +20,7 @@
 .active {
   background: #e5e5e5;
   color: #000;
+  font-weight: bold;
 
   .icon {
     color: #ff0000;
