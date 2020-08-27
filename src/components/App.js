@@ -3,7 +3,9 @@ import Header from './Header';
 import SideBar from './SideBar';
 import RecommendedVideos from './RecommendedVideos';
 import axios from 'axios';
-import APIKEY from '../API';
+const APIKEY = process.env.REACT_APP_APIKEY;
+
+console.log(APIKEY);
 
 const App = () => {
   const [movies, setMovies] = useState([]);
