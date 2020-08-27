@@ -1,0 +1,27 @@
+.MovieCard {
+  width: 20%;
+  min-width: 250px;
+  padding: 0 1em 1em 1em;
+
+  img {
+    width: 100%;
+  }
+
+  .MovieCard__info {
+    .link {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      background: red;
+      padding: 0.5em 0.75em;
+      cursor: pointer;
+      margin-top: 0.5em;
+      transform: scale(1);
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
