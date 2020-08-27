@@ -5,7 +5,11 @@ import Moment from 'react-moment';
 function MovieCard({ movie }) {
   return (
     <div className='MovieCard'>
-      <img src={movie.snippet.thumbnails.high.url} alt={movie.snippet.title} />
+      <img
+        className='MovieCard__thumbnail'
+        src={movie.snippet.thumbnails.high.url}
+        alt={movie.snippet.title}
+      />
       <div className='MovieCard__info'>
         <Avatar
           className='MovieCard__avatar'
@@ -13,20 +17,21 @@ function MovieCard({ movie }) {
           alt={movie.snippet.channelId}
         />
         <div className='MovieCard__text'>
-          <h4>{movie.snippet.title}</h4>
-          <p>{movie.snippet.channelTitle}</p>
-          <p>
+          <a
+            className='MovieCard__text__title'
+            href={`https://www.youtube.com/watch?v=${movie.id.videoId}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {movie.snippet.title}
+          </a>
+          <p className='MovieCard__text__channel'>
+            {movie.snippet.channelTitle}
+          </p>
+          <p className='MovieCard__text__views'>
             900K views : <Moment fromNow>{movie.snippet.publishTime}</Moment>
           </p>
         </div>
-        <a
-          className='link'
-          href={`https://www.youtube.com/watch?v=${movie.id.videoId}`}
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Link to Video
-        </a>
       </div>
     </div>
   );
