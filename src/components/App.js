@@ -27,7 +27,7 @@ const App = () => {
   };
 
   const handleSearch = e => {
-    setSearch(input);
+    setSearch(encodeURI(input));
   };
 
   return (
