@@ -3,7 +3,6 @@ import Header from './Header';
 import SideBar from './SideBar';
 import RecommendedVideos from './RecommendedVideos';
 import axios from 'axios';
-const REACT_APP_APIKEY = process.env.REACT_APP_APIKEY;
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -11,7 +10,7 @@ const App = () => {
   const [search, setSearch] = useState('react js');
 
   useEffect(() => {
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=rating&q=s${search}&key=${REACT_APP_APIKEY}`;
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=rating&q=s${search}&key=${process.env.REACT_APP_APIKEY}`;
 
     const getMovies = async () => {
       const response = await axios.get(url);
