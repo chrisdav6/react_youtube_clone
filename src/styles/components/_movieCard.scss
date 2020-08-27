@@ -5,6 +5,12 @@
 
   .MovieCard__thumbnail {
     width: 100%;
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   .MovieCard__info {

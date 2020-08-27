@@ -5,11 +5,18 @@ import Moment from 'react-moment';
 function MovieCard({ movie }) {
   return (
     <div className='MovieCard'>
-      <img
-        className='MovieCard__thumbnail'
-        src={movie.snippet.thumbnails.high.url}
-        alt={movie.snippet.title}
-      />
+      <a
+        href={`https://www.youtube.com/watch?v=${movie.id.videoId}`}
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <img
+          className='MovieCard__thumbnail'
+          id='thumbnail'
+          src={movie.snippet.thumbnails.high.url}
+          alt={movie.snippet.title}
+        />
+      </a>
       <div className='MovieCard__info'>
         <Avatar
           className='MovieCard__avatar'
