@@ -5,8 +5,6 @@ import RecommendedVideos from './RecommendedVideos';
 import axios from 'axios';
 const APIKEY = process.env.REACT_APP_APIKEY;
 
-console.log(APIKEY);
-
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [input, setInput] = useState('');
