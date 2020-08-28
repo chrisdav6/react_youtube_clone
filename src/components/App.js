@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import SideBar from './SideBar';
 import RecommendedVideos from './RecommendedVideos';
+import Search from './Search';
 import Loader from './Loader';
 import axios from 'axios';
 
@@ -35,16 +36,22 @@ const App = () => {
 
   return (
     <div className='App'>
+      <Header
+        input={input}
+        handleSearch={handleSearch}
+        handleInput={handleInput}
+      />
       <Switch>
-        <Route path='/'>
-          <Header
-            input={input}
-            handleSearch={handleSearch}
-            handleInput={handleInput}
-          />
+        <Route exact path='/'>
           <div className='contents'>
             <SideBar />
             {isLoading ? <Loader /> : <RecommendedVideos movies={movies} />}
+          </div>
+        </Route>
+        <Route path='/search'>
+          <div className='contents'>
+            <SideBar />
+            {isLoading ? <Loader /> : <Search movies={movies} />}
           </div>
         </Route>
       </Switch>

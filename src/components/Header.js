@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AppsIcon from '@material-ui/icons/Apps';
@@ -12,11 +13,13 @@ const Header = ({ input, handleSearch, handleInput }) => {
     <header className='MainHeader'>
       <div className='MainHeader__left'>
         <MenuIcon />
-        <img
-          className='MainHeader__logo'
-          src={YoutubeLogo}
-          alt='Youtube Logo'
-        />
+        <Link to='/'>
+          <img
+            className='MainHeader__logo'
+            src={YoutubeLogo}
+            alt='Youtube Logo'
+          />
+        </Link>
       </div>
       <div className='MainHeader__input'>
         <input
@@ -25,9 +28,11 @@ const Header = ({ input, handleSearch, handleInput }) => {
           value={input}
           onChange={handleInput}
         />
-        <button onClick={handleSearch}>
-          <SearchIcon />
-        </button>
+        <Link to='/search'>
+          <button onClick={handleSearch}>
+            <SearchIcon />
+          </button>
+        </Link>
       </div>
       <div className='MainHeader__icons'>
         <VideoCallIcon className='MainHeader__icon' />
