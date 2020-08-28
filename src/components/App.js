@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import SideBar from './SideBar';
 import RecommendedVideos from './RecommendedVideos';
@@ -31,15 +32,19 @@ const App = () => {
 
   return (
     <div className='App'>
-      <Header
-        input={input}
-        handleSearch={handleSearch}
-        handleInput={handleInput}
-      />
-      <div className='contents'>
-        <SideBar />
-        <RecommendedVideos movies={movies} />
-      </div>
+      <Switch>
+        <Route path='/'>
+          <Header
+            input={input}
+            handleSearch={handleSearch}
+            handleInput={handleInput}
+          />
+          <div className='contents'>
+            <SideBar />
+            <RecommendedVideos movies={movies} />
+          </div>
+        </Route>
+      </Switch>
     </div>
   );
 };
