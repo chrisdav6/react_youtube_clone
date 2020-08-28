@@ -2,7 +2,7 @@ import React from 'react';
 
 const Search = ({ movies }) => {
   return (
-    <div className='Recommended'>
+    <div className='Search'>
       {movies.map((movie, idx) => (
         <p>{movie.snippet.title}</p>
       ))}
