@@ -3,12 +3,14 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import SideBar from './SideBar';
 import RecommendedVideos from './RecommendedVideos';
+import Loader from './Loader';
 import axios from 'axios';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [input, setInput] = useState('');
   const [search, setSearch] = useState('react js');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=rating&q=s${search}&key=${process.env.REACT_APP_APIKEY}`;
@@ -16,6 +18,7 @@ const App = () => {
     const getMovies = async () => {
       const response = await axios.get(url);
       setMovies(response.data.items);
+      setIsLoading(false);
     };
 
     getMovies();
@@ -41,7 +44,7 @@ const App = () => {
           />
           <div className='contents'>
             <SideBar />
-            <RecommendedVideos movies={movies} />
+            {isLoading ? <Loader /> : <RecommendedVideos movies={movies} />}
           </div>
         </Route>
       </Switch>
