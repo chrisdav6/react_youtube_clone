@@ -1,10 +1,11 @@
 import React from 'react';
+import SearchCard from './SearchCard';
 
 const Search = ({ movies }) => {
   return (
     <div className='Search'>
       {movies.map((movie, idx) => (
-        <p>{movie.snippet.title}</p>
+        <SearchCard key={idx} movie={movie} />
       ))}
     </div>
   );

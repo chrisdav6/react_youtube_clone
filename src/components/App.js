@@ -10,11 +10,11 @@ import axios from 'axios';
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [input, setInput] = useState('');
-  const [search, setSearch] = useState('spoon s2000');
+  const [search, setSearch] = useState('react js');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&order=rating&q=s${search}&key=${process.env.REACT_APP_APIKEY}`;
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&order=rating&q=s${search}&key=${process.env.REACT_APP_APIKEY}`;
 
     const getMovies = async () => {
       const response = await axios.get(url);
