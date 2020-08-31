@@ -10,7 +10,7 @@ import axios from 'axios';
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [input, setInput] = useState('');
-  const [search, setSearch] = useState('react js');
+  const [search, setSearch] = useState('spoon s2000');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

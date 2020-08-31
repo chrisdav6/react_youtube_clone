@@ -1,0 +1,43 @@
+.SearchCard {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.5em;
+
+  .SearchCard__image {
+    width: 250px;
+    margin-right: 1em;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .SearchCard__contents {
+    color: #555555;
+
+    .SearchCard__title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .SearchCard__stats {
+      display: flex;
+      align-items: center;
+      font-size: 0.85rem;
+
+      p {
+        margin: 0.5em 0;
+      }
+
+      .SearchCard__stats__icon {
+        font-size: 0.8rem;
+        margin: 0 0.25em;
+      }
+    }
+
+    .SearchCard__description {
+      font-size: 0.88rem;
+    }
+  }
+}
