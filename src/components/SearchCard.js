@@ -5,14 +5,27 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 const SearchCard = ({ movie }) => {
   return (
     <div className='SearchCard'>
-      <div className='SearchCard__image'>
-        <img
-          src={movie.snippet.thumbnails.high.url}
-          alt={movie.snippet.title}
-        />
-      </div>
+      <a
+        href={`https://www.youtube.com/watch?v=${movie.id.videoId}`}
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <div className='SearchCard__image'>
+          <img
+            src={movie.snippet.thumbnails.high.url}
+            alt={movie.snippet.title}
+          />
+        </div>
+      </a>
       <div className='SearchCard__contents'>
-        <h4 className='SearchCard__title'>{movie.snippet.title}</h4>
+        <a
+          className='SearchCard__title'
+          href={`https://www.youtube.com/watch?v=${movie.id.videoId}`}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          {movie.snippet.title}
+        </a>
         <div className='SearchCard__stats'>
           <p>{movie.snippet.channelTitle}</p>
           <CheckCircleIcon className='SearchCard__stats__icon' />
